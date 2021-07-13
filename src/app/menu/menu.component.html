@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto d-flex align-items-center">  <!-- para alinharmos os itens do menu adicionaos o d-flex aqui na ul, o mr-auto diz q a margem direita m-auto ficaria centralizado, ml esquerda  -->
+        <li class="nav-item active">
+          <img src={{foto}} alt="imagem do usuario" width="50px" height="50px" class="img-fluid rounded-circle"> <!--aqui tiramos o home e colocamos a foto do user, o img-fluid e sempre importante pois deixa a imagem responsiva-->
+        </li>
+        <li class="nav-item pl-3"> <!-- padding left-3  -->
+          <p class="m-0 font-weight-bold text-white fs-16">Olá, {{nome}}</p><!--colocamos nome de usuario ao inves da tag <a> de link -->
+        </li>
+        <li *ngIf='auth.adm()' class="nav-item pl-3"> <!-- padding left-3  -->
+            <a href="">
+                <p class="fs-16 text-white m-0"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></p>
+            </a>
+          </li>
+      </ul>
+      <!-- Criamos uma outra list para deixar no lado direito o botao de sair -->
+      <ul class="navbar-nav ml-auto d-flex align-items-center">
+        <li class="nav-item pl-3"> <!-- padding left-3  -->
+            <a (click)='sair()' class="m-0 font-weight-bold text-white fs-16">Sair
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a><!--alterar css para todo <a> virar pointer, aqui tb pode ser um botao, mas ficou como link-->
+          </li>
+
+      </ul>
+    </div>
+  </nav>

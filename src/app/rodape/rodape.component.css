@@ -1,0 +1,27 @@
+ul.social-network {
+    list-style: none; /*tira as bolinhas dos itens de lista */
+    /*display: inline; aqui nao adianta, pois nao atinge os -li- entao criamos outra para estilizar as li*/
+    padding: 0;
+}
+
+ul.social-network li{
+    display:inline;
+    margin:0;
+    padding: 5px;
+}
+
+.fa { /* chama todos os itens fa, no caso fa instagram, fa facebook etc*/
+    font-size: 35pt;
+    color:white;
+    padding: 10px;
+}
+.fa-facebook-square:hover {
+    color:#4267B2;
+}
+.fa-instagram:hover {
+    color:rgb(177, 35, 233);
+
+}
+.fa-linkedin-square:hover {
+    color:#0072b1;
+}
